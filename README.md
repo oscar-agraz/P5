@@ -166,18 +166,18 @@ const vector<float> & Seno::synthesize() {
 <img src="img/Tbl.JPG" width="640" align="center">
 </p>
 
-    - En la función `command()` calculamos la frecuencia de las notas entrantes del fichero `sco` una vez se inicia la fase de ataque en la envolvente ADSR. Para cada nota recorreremos la tabla a unos `steps` determinados que vienen dados por la expresión `step=fnota*N/SamplingRate`, ya que la proporción entre la frecuencia en Hz de la nota y la de muestreo ha de ser la misma que la de exploración de la tabla frente su longitud.
-    Por ejemplo si se diese el caso en que step=2*N, se escogerán de la tabla las fases cada 2 muestras, obteniendo a la salida una señal con menor resolución por período porque incrementa su frecuencia. En la imagen siguiente se demuestra:
+  - En la función `command()` calculamos la frecuencia de las notas entrantes del fichero `sco` una vez se inicia la fase de ataque en la envolvente ADSR. Para cada nota recorreremos la tabla a unos `steps` determinados que vienen dados por la expresión `step=fnota*N/SamplingRate`, ya que la proporción entre la frecuencia en Hz de la nota y la de muestreo ha de ser la misma que la de exploración de la tabla frente su longitud.
+  Por ejemplo si se diese el caso en que step=2*N, se escogerán de la tabla las fases cada 2 muestras, obteniendo a la salida una señal con menor resolución por período porque incrementa su frecuencia. En la imagen siguiente se demuestra:
 
 <p align="center">
 <img src="img/Tbl2.JPG" width="640" align="center">
 </p>
 
-    - El hecho de recorrer la tabla mientras se da una misma nota se hace en `synthesize()` donde incrementamos el step prudentemente para acceder a los valores de la tabla y poner el valor adecuado para la señal de salida. Normalmente el step no llegará a 1 y ha de acceder a un nuevo índice de la tabla cada vez que la acumulación de steps llegue a un nuevo entero.
+  - El hecho de recorrer la tabla mientras se da una misma nota se hace en `synthesize()` donde incrementamos el step prudentemente para acceder a los valores de la tabla y poner el valor adecuado para la señal de salida. Normalmente el step no llegará a 1 y ha de acceder a un nuevo índice de la tabla cada vez que la acumulación de steps llegue a un nuevo entero.
 
-      Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
+    Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
 
-      Muestra del señal resultante en el fichero .wav
+    Muestra del señal resultante en el fichero .wav
 
 <p align="center">
 <img src="img/Sin_Samples.JPG" width="640" align="center">
