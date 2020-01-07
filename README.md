@@ -28,23 +28,37 @@ visualizar el funcionamiento de la curva ADSR.
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus parámetros:
   ataque (A), caída (D), mantenimiento (S) y liberación (R).
 
+
+
   <p align="center">
   <img src="img/Generic.JPG" width="300" align="center">
   </p>
-  
+
+
 
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
   mantenimiemto y el sonido se apague lentamente.
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
     * El intérprete mantiene la nota *pulsada* hasta su completa extinción.
 
+
+
+    <p align="center">
     <img src="img/2a.JPG" width="300" align="center">
+    </p>
+
+
 
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución rápida del
       sonido hasta su finalización.
 
-    <img src="img/2b.JPG" width="300" align="center">
 
+
+    <p align="center">
+    <img src="img/2b.JPG" width="300" align="center">
+    </p>
+
+    
 
 * Un instrumento *plano*, como los de cuerdas frotadas (violines y semejantes) o algunos de viento. En ellos, el
   ataque es relativamente rápido hasta alcanzar el nivel de mantenimiento (sin sobrecarga), y la liberación también
