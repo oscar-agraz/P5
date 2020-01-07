@@ -175,9 +175,9 @@ const vector<float> & Seno::synthesize() {
 
   El hecho de recorrer la tabla mientras se da una misma nota se hace en `synthesize()` donde incrementamos el step prudentemente para acceder a los valores de la tabla y poner el valor adecuado para la señal de salida. Normalmente el step no llegará a 1 y ha de acceder a un nuevo índice de la tabla cada vez que la acumulación de steps llegue a un nuevo entero.
 
-    Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
+  Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
 
-    Muestra del señal resultante en el fichero .wav
+  Muestra del señal resultante en el fichero .wav
 
 <p align="center">
 <img src="img/Sin_Samples.JPG" width="640" align="center">
@@ -187,16 +187,16 @@ const vector<float> & Seno::synthesize() {
 
 - Incluya dos gráficas en las que se vean, claramente, el efecto del trémolo y el vibrato sobre una señal sinusoidal.
 
-  - Tremolo:
+  Tremolo:
 
-  - El efecto del tremolo se puede ver a simple vista, consiste en la oscilación de la amplitud a lo largo del tiempo.
+  El efecto del tremolo se puede ver a simple vista, consiste en la oscilación de la amplitud a lo largo del tiempo.
 <p align="center">
 <img src="img/Sin_Tremolo.JPG" width="300" align="center">
 </p>
 
-  - Vibrato
+  Vibrato
 
-  - A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
+  A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
 
 <p align="center">
 <img src="img/Sin_Vibrato1.JPG" width="300" align="center">
