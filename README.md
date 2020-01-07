@@ -28,7 +28,7 @@ visualizar el funcionamiento de la curva ADSR.
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus parámetros:
   ataque (A), caída (D), mantenimiento (S) y liberación (R).
 
-  <img src="img/Generic.JPG" width="640" align="center">
+  <img src="img/Generic.JPG" width="300" align="center">
 
 
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
@@ -36,19 +36,19 @@ visualizar el funcionamiento de la curva ADSR.
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
     * El intérprete mantiene la nota *pulsada* hasta su completa extinción.
 
-    <img src="img/2a.JPG" width="640" align="center">
+    <img src="img/2a.JPG" width="300" align="center">
 
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución rápida del
       sonido hasta su finalización.
 
-    <img src="img/2b.JPG" width="640" align="center">
+    <img src="img/2b.JPG" width="300" align="center">
 
 
 * Un instrumento *plano*, como los de cuerdas frotadas (violines y semejantes) o algunos de viento. En ellos, el
   ataque es relativamente rápido hasta alcanzar el nivel de mantenimiento (sin sobrecarga), y la liberación también
   es bastante rápida.
 
-  <img src="img/3.JPG" width="640" align="center">
+  <img src="img/3.JPG" width="300" align="center">
 
 
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá añadir la
@@ -73,14 +73,14 @@ búsqueda de los valores en una tabla.
 
 Tremolo:
 
-<img src="img/Sin_Tremolo.JPG" width="640" align="center">
+<img src="img/Sin_Tremolo.JPG" width="300" align="center">
 
 
 Vibrato
 
-<img src="img/Sin_Vibrato1.JPG" width="640" align="center">
+<img src="img/Sin_Vibrato1.JPG" width="300" align="center">
 
-<img src="img/Sin_Vibrato2.JPG" width="640" align="center">
+<img src="img/Sin_Vibrato2.JPG" width="300" align="center">
 
 
 ### Síntesis FM.
@@ -93,9 +93,9 @@ en semitonos.
 - Use el instrumento para generar un vibrato de *parámetros razonables* e incluya una gráfica en la que se vea,
   claramente, la correspondencia entre los valores `N1`, `N2` e `I` con la señal obtenida.
 
-  <img src="img/m1.JPG" width="640" align="center">
+  <img src="img/m1.JPG" width="300" align="center">
 
-  <img src="img/FM.JPG" width="640" align="center">
+  <img src="img/FM.JPG" width="300" align="center">
 
 
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del sonido (N1,
