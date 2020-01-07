@@ -40,7 +40,7 @@ visualizar el funcionamiento de la curva ADSR.
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
     * El intérprete mantiene la nota *pulsada* hasta su completa extinción.
 
-    ADSR_A=0.02; ADSR_D=0.1; ADSR_S=0; ADSR_R=0.5;
+      ADSR_A=0.02; ADSR_D=0.1; ADSR_S=0; ADSR_R=0.5;
 
     <p align="center">
     <img src="img/2a.JPG" width="300" align="center">
@@ -50,7 +50,7 @@ visualizar el funcionamiento de la curva ADSR.
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución rápida del
       sonido hasta su finalización.
 
-    ADSR_A=0.02; ADSR_D=0.2; ADSR_S=0; ADSR_R=0; 
+      ADSR_A=0.02; ADSR_D=0.2; ADSR_S=0; ADSR_R=0; 
 
     <p align="center">
     <img src="img/2b.JPG" width="300" align="center">
@@ -166,18 +166,18 @@ const vector<float> & Seno::synthesize() {
 <img src="img/Tbl.JPG" width="640" align="center">
 </p>
 
-  - En la función `command()` calculamos la frecuencia de las notas entrantes del fichero `sco` una vez se inicia la fase de ataque en la envolvente ADSR. Para cada nota recorreremos la tabla a unos `steps` determinados que vienen dados por la expresión `step=fnota*N/SamplingRate`, ya que la proporción entre la frecuencia en Hz de la nota y la de muestreo ha de ser la misma que la de exploración de la tabla frente su longitud.
-  Por ejemplo si se diese el caso en que step=2*N, se escogerán de la tabla las fases cada 2 muestras, obteniendo a la salida una señal con menor resolución por período porque incrementa su frecuencia. En la imagen siguiente se demuestra:
+    - En la función `command()` calculamos la frecuencia de las notas entrantes del fichero `sco` una vez se inicia la fase de ataque en la envolvente ADSR. Para cada nota recorreremos la tabla a unos `steps` determinados que vienen dados por la expresión `step=fnota*N/SamplingRate`, ya que la proporción entre la frecuencia en Hz de la nota y la de muestreo ha de ser la misma que la de exploración de la tabla frente su longitud.
+    Por ejemplo si se diese el caso en que step=2*N, se escogerán de la tabla las fases cada 2 muestras, obteniendo a la salida una señal con menor resolución por período porque incrementa su frecuencia. En la imagen siguiente se demuestra:
 
 <p align="center">
 <img src="img/Tbl2.JPG" width="640" align="center">
 </p>
 
-  - El hecho de recorrer la tabla mientras se da una misma nota se hace en `synthesize()` donde incrementamos el step prudentemente para acceder a los valores de la tabla y poner el valor adecuado para la señal de salida. Normalmente el step no llegará a 1 y ha de acceder a un nuevo índice de la tabla cada vez que la acumulación de steps llegue a un nuevo entero.
+    - El hecho de recorrer la tabla mientras se da una misma nota se hace en `synthesize()` donde incrementamos el step prudentemente para acceder a los valores de la tabla y poner el valor adecuado para la señal de salida. Normalmente el step no llegará a 1 y ha de acceder a un nuevo índice de la tabla cada vez que la acumulación de steps llegue a un nuevo entero.
 
-  Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
+      Por tal de mejorar la salida, realizamos una interpolación entre la muestra posterior y siguiente de la tabla de forma proporcional a la distancia del step acumulado entre los dos enteros.
 
-  Muestra del señal resultante en el fichero .wav
+      Muestra del señal resultante en el fichero .wav
 
 <p align="center">
 <img src="img/Sin_Samples.JPG" width="640" align="center">
@@ -187,16 +187,16 @@ const vector<float> & Seno::synthesize() {
 
 - Incluya dos gráficas en las que se vean, claramente, el efecto del trémolo y el vibrato sobre una señal sinusoidal.
 
-Tremolo:
+  - Tremolo:
 
-El efecto del tremolo se puede ver a simple vista, consiste en la oscilación de la amplitud a lo largo del tiempo.
+  El efecto del tremolo se puede ver a simple vista, consiste en la oscilación de la amplitud a lo largo del tiempo.
 <p align="center">
 <img src="img/Sin_Tremolo.JPG" width="300" align="center">
 </p>
 
-Vibrato
+  - Vibrato
 
-A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
+  A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
 <p align="center">
 <img src="img/Sin_Vibrato1.JPG" width="300" align="center">
 </p>
@@ -233,7 +233,7 @@ en semitonos.
 
   - Para el clarinete hemos usado una proporción fc/fm de 5/1 (N1=100 N2=20, I=0.5) y para las componentes ADSR: A=0.03, D=0, S=0.4, R=0.07.
 
-  -Para la campanilla hemos usado una proporción fc/fm de 1/1.4 (N1=100 N2=140, I=1) y para las componentes ADSR: A=0.02, D=2, S=0, R=0. 
+  - Para la campanilla hemos usado una proporción fc/fm de 1/1.4 (N1=100 N2=140, I=1) y para las componentes ADSR: A=0.02, D=2, S=0, R=0. 
 
 ### Orquestación usando el programa synth.
 
@@ -247,4 +247,4 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos necesarios
   están en direcotorio indicado).
 
-`synth instruments.orc -e effects.orc ToyStory_A_Friend_in_me.sco ToyStory_A_Friend_in_me.wav`
+    `synth instruments.orc -e effects.orc ToyStory_A_Friend_in_me.sco ToyStory_A_Friend_in_me.wav`
