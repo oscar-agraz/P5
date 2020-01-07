@@ -147,19 +147,31 @@ const vector<float> & Seno::synthesize() {
 - Explique qué método se ha seguido para asignar un valor a la señal a partir de los contenidos en la tabla, e incluya
   una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la tabla y los de la
   señal generada.
-- Si ha implementado la síntesis por tabla almacenada en fichero externo, incluya a continuación el código del método
-  `command()`.
+
+<p align="center">
+<img src="img/Tbl.JPG" width="300" align="center">
+</p>
+<p align="center">
+<img src="img/Tbl2.JPG" width="640" align="center">
+</p>
+<p align="center">
+<img src="img/Sin_Samples.JPG" width="300" align="center">
+</p>
 
 ### Efectos sonoros.
 
 - Incluya dos gráficas en las que se vean, claramente, el efecto del trémolo y el vibrato sobre una señal sinusoidal.
 
 Tremolo:
+
+El efecto del tremolo se puede ver a simple vista, consiste en la oscilación de la amplitud a lo largo del tiempo.
 <p align="center">
 <img src="img/Sin_Tremolo.JPG" width="300" align="center">
 </p>
 
 Vibrato
+
+A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
 <p align="center">
 <img src="img/Sin_Vibrato1.JPG" width="300" align="center">
 </p>
@@ -186,8 +198,6 @@ en semitonos.
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del sonido (N1,
   N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas diatónicas (fichero
   `doremi.sco`) y ponga el resultado en los ficheros `work/doremi/clarinete.wav` y `work/doremi/campana.work`.
-  * También puede colgar en el directorio work/doremi otras escalas usando sonidos *interesantes*. Por ejemplo,
-    violines, pianos, percusiones, espadas láser de la [Guerra de las Galaxias](https://www.starwars.com/), etc.
 
 ### Orquestación usando el programa synth.
 
