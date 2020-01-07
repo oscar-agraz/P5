@@ -194,9 +194,9 @@ const vector<float> & Seno::synthesize() {
 <img src="img/Sin_Tremolo.JPG" width="300" align="center">
 </p>
 
-  Vibrato
+    Vibrato
 
-  A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
+    A simple vista desde un analisis temporal no podemos ver el efecto del vibrato, hemos de hacer una representación espectral para apreciarlo, ya que las oscilaciones ahora se encuentran en la frecuencia y varían a lo largo del tiempo.
 
 <p align="center">
 <img src="img/Sin_Vibrato1.JPG" width="300" align="center">
