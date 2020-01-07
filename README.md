@@ -28,8 +28,10 @@ visualizar el funcionamiento de la curva ADSR.
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus parámetros:
   ataque (A), caída (D), mantenimiento (S) y liberación (R).
 
+  <p align="center">
   <img src="img/Generic.JPG" width="300" align="center">
-
+  </p>
+  
 
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
   mantenimiemto y el sonido se apague lentamente.
