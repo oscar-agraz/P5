@@ -215,7 +215,7 @@ en semitonos.
 - Use el instrumento para generar un vibrato de *parámetros razonables* e incluya una gráfica en la que se vea,
   claramente, la correspondencia entre los valores `N1`, `N2` e `I` con la señal obtenida.
 
-  - Por tal de encontrar el valoe exacto para `fm` usamos la relación siguiente:
+  - Por tal de encontrar el valor exacto para `fm` usamos la relación siguiente:
   <p align="center">
   <img src="img/m1.JPG" width="300" align="center">
   </p>
@@ -248,4 +248,6 @@ Use el programa `synth` para generar canciones a partir de su partitura MIDI. Co
 - Indique, a continuación, la orden necesaria para generar la señal (suponiendo que todos los archivos necesarios
   están en direcotorio indicado).
 
-    `synth instruments.orc -e effects.orc ToyStory_A_Friend_in_me.sco ToyStory_A_Friend_in_me.wav`
+    `synth instruments.orc ToyStory_A_Friend_in_me.sco ToyStory_A_Friend_in_me.wav`
+    
+    `synth instruments.orc -e effects.orc ToyStory_A_Friend_in_me_w_effects.sco ToyStory_A_Friend_in_me_w_effects.wav`
